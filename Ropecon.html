@@ -598,7 +598,7 @@ Tunnet, kuin olisit osa porukkaa ja pienen hetken kylvet taas Ropecon-tunnelmass
 ”Vaikka ollaankin aimo porukka tuon tulen ääressä niin tuskin meistä ihan lohikäärmettä sytyttämään on.”
 
 Huokaiset pettyneenä ja riiputat hetken päätäsi, kunnes tunnet, että joku pujottaa kaulallesi jotain. Taottu lohikäärmeriipus, joka tuoksuu vieläkin savulta.
-”Ota nyt edes tämä kiitokseksi, että suurin osa parrastani säästyi sinun ansiostasi! Toivottavasti löydät etsimäsi ja jos et, tule kojulle taas hengaamaan!”
+”Ota nyt edes tämä kiitokseksi, että ahjo leiskuu taas sinun ansiostasi! Toivottavasti löydät etsimäsi ja jos et, tule kojulle taas hengaamaan!”
 
 (if: $elementit is 2) [Tuntuu yhteisölliseltä ja hymyilet heiluttaessasi sepille heipat ainakin toistaiseksi. Piha on vielä niin täynnä savua, että päätät palata takaisin [[sisälle. -&gt;2. Larp-tiskiltä kuuluu vielä elon merkkejä, äkkiä sinne!!]]]
 (if: $elementit is 3) [Mistä etsit seuraavaksi?
@@ -839,7 +839,7 @@ Et ole vieläkään uskoa korviasi.
 (set: $countdown to 6)
 
 (if: $paikka is 6)[[Jokin tuntuu kuitenkin painavan sinua.]]
-(if: $paikka is &lt;6)[[Jokin tuntuu kuitenkin painavan sinua]]</tw-passagedata><tw-passagedata pid="99" name="Jokin tuntuu kuitenkin painavan sinua." tags="lop" position="4397.333333333333,898" size="100,100">Ei, ei Kivi, jota Kiinnostaa, eikä enää syyllisyys tai huolikaan vaan seikkailulta löytämäsi muu roina. Onko sillä jokin merkitys?
+(if: $paikka is &lt;6)[[Jokin tuntuu kuitenkin painavan sinua. -&gt;Jokin tuntuu kuitenkin painavan sinua]]</tw-passagedata><tw-passagedata pid="99" name="Jokin tuntuu kuitenkin painavan sinua." tags="lop" position="4397.333333333333,898" size="100,100">Ei, ei Kivi, jota Kiinnostaa, eikä enää syyllisyys tai huolikaan vaan seikkailulta löytämäsi muu roina. Onko sillä jokin merkitys?
 
 (if: $pyyhe is 1)[[1. Painijan pyyhe]]
 (if: $tikari is 1)[[2. Proppitikari]]
@@ -956,66 +956,72 @@ Mutta seuraava kysymys kuuluukin, miten aloitat conisi?
 &#39;&#39;GOOD ENDING!&#39;&#39; 
 
 
-[[Lopputeksteihin]] </tw-passagedata><tw-passagedata pid="109" name="Painijan pyyhe" tags="lop" position="4171,1196" size="100,100">Lohe nostaa kulmiaan, kun esittelet sille pyyhkeen.
+[[Lopputeksteihin]] </tw-passagedata><tw-passagedata pid="109" name="Painijan pyyhe" tags="lop" position="4169,1195" size="100,100">Lohe nostaa kulmiaan, kun esittelet sille pyyhkeen.
 ”Jahas, Tammisen Tonin pyyhe? No tuota, onhan siinä ainesta fanituotteeksi! Hieno muisto suosikin kannustamisesta!”
 (set: $pyyhe to 0)
 (set: $countdown to -1)
 
-(if: $tikari is 1)[[Proppitikari]]
-(if: $lehtinen is 1)[[Tanssilehtinen]]
-(if: $glowstick is 1)[[Glowstick rannerengas]]
-(if: $heselelu is 1)[[Heselelu]]
-(if: $villasukat is 1)[[Villasukat]]
-(if: $countdown is &lt;6) [[Viimeinkin voit rentoutua.]]</tw-passagedata><tw-passagedata pid="110" name="Proppitikari" tags="lop" position="4225.333333333333,1326" size="100,100">Lohikäärme katselee tikaria silmät pyöreinä.
+(if: $tikari is 1) [1.[[Proppitikari]]]
+(if: $lehtinen is 1) [2.[[Tanssilehtinen]]]
+(if: $glowstick is 1) [3.[[Glowstick rannerengas]]]
+(if: $heselelu is 1) [4.[[Heselelu]]]
+(if: $villasukat is 1) [5.[[Villasukat]]]
+
+(if: $countdown is &lt;6) [[Viimeinkin voit rentoutua.]]</tw-passagedata><tw-passagedata pid="110" name="Proppitikari" tags="lop" position="4224.333333333333,1326" size="100,100">Lohikäärme katselee tikaria silmät pyöreinä.
 ”Varsin hienoa käsityötä! Muistatko, mihin larppiin tuo oli näyttelyn mukaan tehty? Voimani olivat kuitenkin piiloutuneet aivan toisiin esineisiin.”
 (set: $tikari to 0)
 (set: $countdown to -1)
 
-(if: $pyyhe is 1)[[Painijan pyyhe]]
-(if: $lehtinen is 1)[[Tanssilehtinen]]
-(if: $glowstick is 1)[[Glowstick rannerengas]]
-(if: $heselelu is 1)[[Heselelu]]
-(if: $villasukat is 1)[[Villasukat]]
-(if: $countdown is &lt;6) [[Viimeinkin voit rentoutua.]]</tw-passagedata><tw-passagedata pid="111" name="Tanssilehtinen" tags="lop" position="4353,1395" size="100,100">Nähdessään lehtisen Lohe pyörähtää sinä ja Kivi selässään hienoisesti.
+(if: $pyyhe is 1) [1.[[Painijan pyyhe]]]
+(if: $lehtinen is 1) [2.[[Tanssilehtinen]]]
+(if: $glowstick is 1) [3.[[Glowstick rannerengas]]]
+(if: $heselelu is 1) [4.[[Heselelu]]]
+(if: $villasukat is 1) [5.[[Villasukat]]]
+
+(if: $countdown is &lt;6) [[Viimeinkin voit rentoutua.]]</tw-passagedata><tw-passagedata pid="111" name="Tanssilehtinen" tags="lop" position="4351,1395" size="100,100">Nähdessään lehtisen Lohe pyörähtää sinä ja Kivi selässään hienoisesti.
 ”Oi, tanssiaiset! Nyt kun voimani ovat palanneet, nekin pääsevät jatkumaan! Tansseista suosikkini on ehdottomasti Two to Twirl.”
 (set: $lehtinen to 0)
 (set: $countdown to -1)
 
-(if: $pyyhe is 1)[[Painijan pyyhe]]
-(if: $tikari is 1)[[Proppitikari]]
-(if: $glowstick is 1)[[Glowstick rannerengas]]
-(if: $heselelu is 1)[[Heselelu]]
-(if: $villasukat is 1)[[Villasukat]]
+(if: $pyyhe is 1) [1.[[Painijan pyyhe]]]
+(if: $tikari is 1) [2.[[Proppitikari]]]
+(if: $glowstick is 1) [3.[[Glowstick rannerengas]]]
+(if: $heselelu is 1) [4.[[Heselelu]]]
+(if: $villasukat is 1) [5.[[Villasukat]]]
+
 (if: $countdown is &lt;6) [[Viimeinkin voit rentoutua.]]</tw-passagedata><tw-passagedata pid="112" name="Glowstick rannerengas" tags="lop" position="4503.333333333333,1382" size="100,100">Glowstickin hehku heijastuu kauniisti Lohen mustilta suomuilta.
 ”Hohoo, discolarpin hämärässä kukaan ei jää tuo kädessä huomaamatta! Voi kunpa mahtuisin itsekin sinne joskus! Voi kuitenkin olla, ettei tilaan silloin sopisi minun lisäkseni edes DJ...”
 (set: $glowstick to 0)
 (set: $countdown to -1)
 
-(if: $pyyhe is 1)[[Painijan pyyhe]]
-(if: $tikari is 1)[[Proppitikari]]
-(if: $lehtinen is 1)[[Tanssilehtinen]]
-(if: $heselelu is 1)[[Heselelu]]
-(if: $villasukat is 1)[[Villasukat]]
+(if: $pyyhe is 1) [1.[[Painijan pyyhe]]]
+(if: $tikari is 1) [2.[[Proppitikari]]]
+(if: $lehtinen is 1) [3.[[Tanssilehtinen]]]
+(if: $heselelu is 1) [4.[[Heselelu]]]
+(if: $villasukat is 1) [5.[[Villasukat]]]
+
 (if: $countdown is &lt;6) [[Viimeinkin voit rentoutua.]]</tw-passagedata><tw-passagedata pid="113" name="Heselelu" tags="lop" position="4632,1303" size="100,100">Lohe näyttää täysin hämmentyneeltä.
 ”Mikä. Ihme. Tuo. On. Siis, onko se lelu? Ihan varmastiko? Miten sillä edes leikitään? Saatan olla lohikäärme mutta kuvittelin ymmärtäväni ihmisten aivoituksia paremmin...”
 (set: $heselelu to 0)
 (set: $countdown to -1)
 
-(if: $pyyhe is 1)[[Painijan pyyhe]]
-(if: $tikari is 1)[[Proppitikari]]
-(if: $lehtinen is 1)[[Tanssilehtinen]]
-(if: $glowstick is 1)[[Glowstick rannerengas]]
-(if: $villasukat is 1)[[Villasukat]]
-(if: $countdown is &lt;6) [[Viimeinkin voit rentoutua.]]</tw-passagedata><tw-passagedata pid="114" name="Villasukat" tags="lop" position="4612,1162" size="100,100">Suuri olento tuntuu hitaassa lennossaan hyrievän, se kuulotaa hiukan kehräykseltä.
+(if: $pyyhe is 1) [1.[[Painijan pyyhe]]]
+(if: $tikari is 1) [2.[[Proppitikari]]]
+(if: $lehtinen is 1) [3.[[Tanssilehtinen]]]
+(if: $glowstick is 1) [4.[[Glowstick rannerengas]]]
+(if: $villasukat is 1) [5.[[Villasukat]]]
+
+(if: $countdown is &lt;6) [[Viimeinkin voit rentoutua.]]</tw-passagedata><tw-passagedata pid="114" name="Villasukat" tags="lop" position="4612,1162" size="100,100">Suuri olento tuntuu hitaassa lennossaan hyrsievän, se kuulotaa hiukan kehräykseltä.
 ”Aivan ihastuttavat sukat! Ja taitavasti tehty resori, hyvin omintakeinen kutomistekniikka! Noita katsellessa tulin varsin lämmin olo mutta muistathan palauttaa ne omistajalleen!”
 (set: $villasukat to 0)
 (set: $countdown to -1)
 
-(if: $pyyhe is 1)[[Painijan pyyhe]]
-(if: $tikari is 1)[[Proppitikari]]
-(if: $lehtinen is 1)[[Tanssilehtinen]]
-(if: $glowstick is 1)[[Glowstick rannerengas]]
-(if: $heselelu is 1)[[Heselelu]]
+(if: $pyyhe is 1) [1.[[Painijan pyyhe]]]
+(if: $tikari is 1) [2.[[Proppitikari]]]
+(if: $lehtinen is 1) [3.[[Tanssilehtinen]]]
+(if: $glowstick is 1) [4.[[Glowstick rannerengas]]]
+(if: $heselelu is 1) [5.[[Heselelu]]]
+
 (if: $countdown is &lt;6) [[Viimeinkin voit rentoutua.]]</tw-passagedata><tw-passagedata pid="115" name="Viimeinkin voit rentoutua." tags="lop" position="4753,1450" size="100,100">Hartiasi laskeutuvat, et pure enää leukaasi niin tiukalle ja suustasi pääsee huojentunut huokaus. Lohe heittelee ilmassa muutaman rauhallisen silmukan ja repeät itsekin iloiseen nauruun. Lempitapahtumasi on turvassa ja ehkä conittajatkin kohta heräävät kummallisesta horroksestaan! Tulet myös ajatelleeksi, kuinka juuri sinä olit (vähän tietämättäsi, mutta silti) avaintekijänä Ropeconin tulevaisuuden kannalta. Vaikka tunsitkin olosi ajoittain neuvottomaksi, ilman sinua kaikki olisi voinut olla mennyttä. Ja samalla tuli nähtyä enemmän conia kuin pitkään aikaan!
 
 Lohe tuntuu kuin lukevan ajatuksesi.
