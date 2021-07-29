@@ -332,7 +332,7 @@ Juoksit niin kovaa että silmissä hieman heittää ja kestää hetki ennen kuin
 Aikasi etsit menua yli ja ympäri eikä kerrosta löydy. Totta puhuen, et tainnut nähdä yhtään tuttua ateriaa listalla! Pelko kipuaa taas niskaasi pitkin, onko hesekin sekaisin??? Uskallat juuri ja juuri vilkaista muiden asiakkaana olevien kävijöiden ostoksia. 
 Eräs nainen tunkee grillimaustepusseja jo kolmanteen kassiin, joku maksaa kassalla d4 nopilla ja mies pöydässä nuolee tyhjää tarjotintaan hartaasti. Vooooi ei. Viimein pääset tiskille ja kysyt [[kerrosaterian]] perään.
 
-(set: $paikka to $paikka +1)</tw-passagedata><tw-passagedata pid="32" name="kerrosaterian" tags="hese" position="1301,774" size="100,100">”Valitan, sellaista meillä ei ole myynnissä. Mutta ota lasten ateria kahdella perushampparilla niin ehkä sillä lähtee nälkä? Colaakaan, colaako se oli? Juu colaakaan ei ole, on vain rusinasoppaa.”
+(if: $heselelu is 0) [(set: $paikka to $paikka +1)]</tw-passagedata><tw-passagedata pid="32" name="kerrosaterian" tags="hese" position="1301,774" size="100,100">”Valitan, sellaista meillä ei ole myynnissä. Mutta ota lasten ateria kahdella perushampparilla niin ehkä sillä lähtee nälkä? Colaakaan, colaako se oli? Juu colaakaan ei ole, on vain rusinasoppaa.”
 
 Tyydyt kohtaloosi ja myönnyt rusinaiseen lastenateriaan. Havahdut kuitenkin pian murjotuksestasi kysymykseen.
 
@@ -429,7 +429,7 @@ Pääset alkuhämmennyksen jälkeen aika nopeasti sisään hahmoosi ja uppoat t�
 ”Joutomaa haarautuu! En osaa sanoa, mihin suuntaan meidän tulisi mennä. Mikään reitti ei vastaa legendoja! Olemme tuomittuja!”
 Ihastelet pelaajan draamantajua, kuinka mukaansatepaavaa!
 
-”Jonkun on pakko tietää reitti. Kakaiskaa ulos!” lääkintähahmo kivahtaa syyttävästi ja olet todella vaikuttunut vahvasta roolisuorituksesta. Väki kyräilee ja paikallaolevista selviytyjistä saadaan seulottua kolme tietäväistä. Kukin väittää tietysti olevansa oikeassa mutta larppi alkaa jo lähestyä loppuaan eikä kukaan tahdo saada vietyä peliä eteenpäin. Voi ei, ovatko larppaajatkin pikkuhiljaa unohtamassa, kuinka larpataan? Päätät luoda peliä muille ja haastattelet ilmoittautuneita. [[Jokaisella on tietysti mielipiteensä.]]
+”Jonkun on pakko tietää reitti. Kakaiskaa ulos!” lääkintähahmo kivahtaa syyttävästi ja olet todella vaikuttunut vahvasta roolisuorituksesta. Väki kyräilee ja paikallaolevista selviytyjistä saadaan seulottua kolme tietäväistä. Kukin väittää tietysti olevansa oikeassa, mutta larppi alkaa jo lähestyä loppuaan eikä kukaan tahdo saada vietyä peliä eteenpäin. Voi ei, ovatko larppaajatkin pikkuhiljaa unohtamassa kuinka larpataan? Päätät luoda peliä muille ja haastattelet ilmoittautuneita. [[Jokaisella on tietysti mielipiteensä.]]
 </tw-passagedata><tw-passagedata pid="47" name="Jokaisella on tietysti selityksensä." tags="larpti" position="2074,276" size="100,100">”Perättömiä syytöksiä! Minä olen vastuussa kiven säilytyksestä ympäri vuoden ja joka vuosi se on saapunut Saattajan tuomana Kantajan huomaan, jotta se voidaan asettaa paikoilleen! Miksi minä varastaisin sen? Annoin kiven rituaalikääreisiin kiedottuna Rouskulle, joka on tänä vuonna Saattaja.”, pyörittelee silmiään Mihka, varsin rauhallisen olemuksen omaava virvatulihahmo. Pelaajalla on mieletön itsevarma tapa pelata hahmoaan!
 
 ”Minäkö? En voisi koskaan tehdä sellaista! Minut valittiin tänä vuonna viimein Kantajaksi, miksi minä pilaisin itseltäni moisen kunnian? Sitä paitsi, en ole vielä edes nähnyt kiven keltaista pilkahdustakaan, ehkä Mihka omi kiven! Voi minua parkaa!” itkee vuolaasti nuori Piki, peukaloinen, joka osallistuu kevään herätykseen tänä vuonna ensimmäistä kertaa. Sinuakin rupeaa itkettämään, niin aito pelaajan esitys on.
@@ -464,9 +464,9 @@ Ja siinä samassa muistat lohikäärmeen voimat. Kyselet pää huurussa muilta, 
 ”Oli mielettömän siisti peli! Ilman sinua larppi olisi saattanut jäädä junnaamaan. Kiitos, kun hyppäsit niin äkkiä mukaan! Homma soljui niin hyvin! Mutta tuota, näytät vähän huonovointiselta. Mitä jos otat vaikka tuon proppipullon? Se on ihan perus lähdevesi, hörppää siitä!”
 
 Heilutat kanssalarppaajille, otat pullosta pienen huikan ja lähdet larpista tyhjin käsin. Kohta larppaajatkin unohtavat, että ovat [[Ropeconissa.]]
-(set: $vesipullo to 1)</tw-passagedata><tw-passagedata pid="51" name="Jokaisella on tietysti mielipiteensä." tags="larpti" position="2079,773" size="100,100">Sanoinhan jo että oikealle! Minä olen elänyt Öljysaarella kauemmin kuin kukaan teistä! Olen kuullut jokaisen joutuomaan tarinan Ydinkeitaasta. Miksi minä valehtelisin? Väitän, että Rattlesnake valehtelee, hän oli tiedustelemassa minun jälkeeni!” pyörittelee silmiään Maggot, varsin rauhallisen olemuksen omaava haaskaa metsästävä hahmo. Pelaajalla on mieletön itsevarma tapa pelata hahmoaan!
+(set: $vesipullo to 1)</tw-passagedata><tw-passagedata pid="51" name="Jokaisella on tietysti mielipiteensä." tags="larpti" position="2079,773" size="100,100">&quot;Sanoinhan jo että oikealle! Minä olen elänyt Öljysaarella kauemmin kuin kukaan teistä! Olen kuullut jokaisen joutuomaan tarinan Ydinkeitaasta. Miksi minä valehtelisin? Väitän, että Rattlesnake valehtelee, hän oli tiedustelemassa minun jälkeeni!” pyörittelee silmiään Maggot, varsin rauhallisen olemuksen omaava haaskaa metsästävä hahmo. Pelaajalla on mieletön itsevarma tapa pelata hahmoaan!
 
-”Minäkö? En voisi koskaan tehdä sellaista! Hädin tuskin selvisin saaren palosta. Kuinka voitte luulla, etten halua löytää Ydinkeidasta? Sitä paitsi, Mirror on aina väittänyt tuntevansa reitin keitaan ruosteisille porteille. Hän tietää johtaa meitä harhaan! Keskireitti!” itkee vuolaasti nuori Pox, mekaanikko, joka jaksaa tuskin kävellä. Sinuakin rupeaa itkettämään, niin aito pelaajan esitys on.
+”Minäkö? En voisi koskaan tehdä sellaista! Hädin tuskin selvisin saaren palosta. Kuinka voitte luulla, etten halua löytää Ydinkeidasta? Sitä paitsi, Maggot on aina väittänyt tuntevansa reitin keitaan ruosteisille porteille. Hän tietää johtaa meitä harhaan! Keskireitti!” itkee vuolaasti nuori Pox, mekaanikko, joka jaksaa tuskin kävellä. Sinuakin rupeaa itkettämään, niin aito pelaajan esitys on.
 
 ”Nyt minulta palaa kyllä pinna!! Minä olen pitänyt huolen etteivät varusteemme hajoa käsiin. Miksi johtaisin meidät tuhoon keskelle joutomaata?! Vannon pyhän kromin kautta, että legenda sanoo kääntymään vasemmalle! Pox puhuu palturia! Se on katkera, kun sen menopeli paloi! Se, joka väittää muuta, saa tuta...” murisee Rattlesnake, varustusmestari, jonka kiehuva viha saa sinut oikein säpsähtämään. Huh, pelaaja saa itsensä vaikuttamaan niin uhkaavalta!
 
@@ -478,7 +478,7 @@ Mutta kuka puhuu puppua?
 
 Syntyy mellakka, jonka tiimellyksessä nappaat hahmonasi jonkun vyöltä bensapulloa proppaavan vesipullon ja kalautat Poxilta tajun kankaalle. Maggot oli loppujen lopuksi oikeassa ja selviytyjäjoukkonne löysi tien luvatulle Ydinkeitaalle! Pelin loppubriiffissä muut pelaajat kehuvat päättelykykyäsi ja taitoasi heittäytyä äkkiä uuteen tilanteeseen. Olet itsekin iloinen, että lähdit mukaan! Niin moninainen pelaajaporukka sai sinussakin luovuuden virtaamaan voimakkaasti!
 
-Ja siinä samassa muistat lohikäärmeen voimat. Kyselet pää huurussa muilta, ovatko he nähneet niitä, tarkistat vielä varoiksi, josko worblasta muovattu feikki kevään kivi olisi vahingossa yksi pedon voimista, mutta turhaan. Muut pelaajatkin vain nostelevat olkiaan. Autat pelitilan siivoamisessa ja joku koskettaa sinua olkapäälle.
+Ja siinä samassa muistat lohikäärmeen voimat. Kyselet pää huurussa muilta, ovatko he nähneet niitä, tarkistat vielä varoiksi, josko worblasta muovattu ratinraato olisi vahingossa yksi pedon voimista, mutta turhaan. Muut pelaajatkin vain nostelevat olkiaan. Autat pelitilan siivoamisessa ja joku koskettaa sinua olkapäälle.
 ”Oli mielettömän siisti peli! Ilman sinua larppi olisi saattanut jäädä junnaamaan. Kiitos kun hyppäsit niin äkkiä mukaan, homma soljui niin hyvin! Mutta tuota, näytät vähän huonovointiselta. Mitä jos otat vaikka tuon proppipullon? Se on ihan perus lähdevesi, hörppää siitä!”
 
 Heilutat kanssalarppaajille, otat pullosta pienen huikan ja lähdet larpista tyhjin käsin. Kohta larppaajatkin unohtavat että ovat [[Ropeconissa.]]
@@ -520,11 +520,11 @@ Joku naurahtaa sivussa.
 ”Kaikki keinot kehiin! Meiltä loppuu jo löpö!”
 
 Tarkastelet hetken Kiveltä saamaasi [[viuhkaa.]]
-(set: $elementit to $elementit +1)</tw-passagedata><tw-passagedata pid="58" name="1. Show-paini alkaa kai näillä minuuteilla ja siellä ainakin on aina voimakas meno?" tags="paini" position="2276.3333333333335,984.6666666666667" size="100,100">Showpainia on saapunut katsomaan järkyttävä määrä coniväkeä. Ihmisiä on tungokseksi saakka lavan ympärillä ja joudut käyttämään vähä kyynärpäätaktiikkaa saadaksesi ringin edes näköpiiriisi. Sohaiset jotakuta kylkeen ja pahoittelet.
+(set: $elementit to $elementit +1)</tw-passagedata><tw-passagedata pid="58" name="1. Show-paini alkaa kai näillä minuuteilla ja siellä ainakin on aina voimakas meno?" tags="paini" position="2273.3333333333335,984.6666666666667" size="100,100">Showpainia on saapunut katsomaan järkyttävä määrä coniväkeä. Ihmisiä on tungokseksi saakka lavan ympärillä ja joudut käyttämään vähä kyynärpäätaktiikkaa saadaksesi ringin edes näköpiiriisi. Sohaiset jotakuta kylkeen ja pahoittelet.
 
 ”SHHHHHH!!!”
 
-Ympärilläsi liki kolmekymmentä tyyppiä kääntyy hyssyttelemään sinua vihaisena ja vasta silloin tajuat, kuinka hipi hiljainen sali ihmismäärästään huolimatta on. Käännyt katsomaan rinkiin ja sen sijaan, että yksikään painija supplexaisi toista tai valmistautuisi vanhaan kunnon drop kickiin, kaksi painijaa ottaa lavalla vuorotellen mittaa runonlausunnassa.
+Ympärilläsi liki kolmekymmentä tyyppiä kääntyy hyssyttelemään sinua vihaisena ja vasta silloin tajuat, kuinka hipi hiljainen sali ihmismäärästään huolimatta on. Käännyt katsomaan rinkiin ja sen sijaan, että yksikään painija suplexaisi toista tai valmistautuisi vanhaan kunnon drop kickiin, kaksi painijaa ottaa lavalla vuorotellen mittaa runonlausunnassa.
 
 ”Jyrän alle jäänyt mehiläinen...”
 ”Tuli huominen tulojaan, tulevaisuus mukanaan...”
@@ -537,8 +537,8 @@ Yrität vielä kerran saada jotakuta auttamaan sinua lohikäärmeen kanssa, mutt
 [[1. Hei haloo nyt, missä on kunnon DDT:t? Tai Neckbreakerit! Eikö ketään kiinnosta Ropecon ja sen kohtalo!]]
 [[2. Aulassa makaa kuihtuva otus ja jos en löydä sen voimia, kuihtuu painijoidenkin runosuoni! -&gt;1. Hei haloo nyt, missä on kunnon DDT:t? Tai Neckbreakerit! Eikö ketään kiinnosta Ropecon ja sen kohtalo!]]
 
-(set: $paikka to $paikka +1)
-</tw-passagedata><tw-passagedata pid="59" name="2. Kuulen tanssiaisten ääniä jostain? Ehkä siellä on vielä joku joka muistaa asioita!" tags="tanssi" position="2495.6666666666665,1000" size="100,100">Tanssiaissalissa väki pyörii ja askeltaa. Ei kuitenkaan ihan niin kuin yleensä. Joka toinen tanssija vaikuttaa täysin unohtaneen joko kokonaisia historiallisten tanssien kategorioita tai rytmitajunsa. Joku yrittää kysyä sinua tanssiin, mutta empii.
+(If: $pyyhe is 0) [(set: $paikka to $paikka +1)]
+ </tw-passagedata><tw-passagedata pid="59" name="2. Kuulen tanssiaisten ääniä jostain? Ehkä siellä on vielä joku joka muistaa asioita!" tags="tanssi" position="2490.6666666666665,1000" size="100,100">Tanssiaissalissa väki pyörii ja askeltaa. Ei kuitenkaan ihan niin kuin yleensä. Joka toinen tanssija vaikuttaa täysin unohtaneen joko kokonaisia historiallisten tanssien kategorioita tai rytmitajunsa. Joku yrittää kysyä sinua tanssiin, mutta empii.
 ”Hetkinen. Kumpi onkaan vasen jalka...?”
 Jäät typertyneenä katsomaan tanssiaisten vaappuvaa menoa eikä touhua ainakaan helpota kaiuttimista soiva Jason Derulon musiikki. Ikinä ei ole tanssiaisissa ollut tällaista menoa!
 
@@ -546,7 +546,7 @@ Koetat kaikesta haparoinnista huolimatta saada selville, olisiko edes yksi voimi
 [[1. Anteeksi, tuota, oletteko nähneet lohikäärmeen voimia? Äh, tavallaan jotain outoa?]]
 [[2. Ensinnäkin, pornopolkkassa peukalo laitetaan vasten kämmenen syrjää, noin. Voitko auttaa?]]
 
-(set: $paikka to $paikka +1)</tw-passagedata><tw-passagedata pid="60" name="3. Discolarp on tuntunut aina tosi energiseltä, ehkä voimien rippeitä löytyisi sieltä?" tags="disco" position="2695.3333333333335,897.3333333333334" size="100,100">Jumputus kuuluu jo kaukaa ja samoin erikoiset kiljahdukset. Voisiko täällä vihdoin olla osa lohikäärmeen voimista, jolla saisit Ropeconin entiselleen? Saavut discolarpin ovelle ja sydämesi hyppää kurkkuun. Jumputus ei kuulukaan lattiaa tamppaavista conittajista vaan tanssijat istuvat sen sijaan ringissä pelaten taputusleikkejä. Taustalla soi Celine Dion, valotkaan eivät vilku ja kolme DJ:tä yrittää näemmä yhdessä selvittää yhden läppärin salasanaa. Kukaan ei sinänsä näytä tilanteeseen tyytymättömältä paitsi sinä itse. Sekasorto ulottuu jo tänne asti ja meno on kuin limudiskossa.
+(if: $lehtinen is 0) [(set: $paikka to $paikka +1)]</tw-passagedata><tw-passagedata pid="60" name="3. Discolarp on tuntunut aina tosi energiseltä, ehkä voimien rippeitä löytyisi sieltä?" tags="disco" position="2695.3333333333335,897.3333333333334" size="100,100">Jumputus kuuluu jo kaukaa ja samoin erikoiset kiljahdukset. Voisiko täällä vihdoin olla osa lohikäärmeen voimista, jolla saisit Ropeconin entiselleen? Saavut discolarpin ovelle ja sydämesi hyppää kurkkuun. Jumputus ei kuulukaan lattiaa tamppaavista conittajista vaan tanssijat istuvat sen sijaan ringissä pelaten taputusleikkejä. Taustalla soi Celine Dion, valotkaan eivät vilku ja kolme DJ:tä yrittää näemmä yhdessä selvittää yhden läppärin salasanaa. Kukaan ei sinänsä näytä tilanteeseen tyytymättömältä paitsi sinä itse. Sekasorto ulottuu jo tänne asti ja meno on kuin limudiskossa.
 
 Yrität epätoivoisesti yllyttää väkeä tanssiin mutta joka kerta, kun keskeytät leikin, istujat aloittavat sen alusta.
 ”Tule mukaan! Soo makaroona! Tiiun toskama roska!”
@@ -554,7 +554,7 @@ Yrität epätoivoisesti yllyttää väkeä tanssiin mutta joka kerta, kun keskey
 [[1. “Häh? Eijei, ei kiitos, eikö teidän pitäisi tällä hetkellä hyppiä hikisinä jonkun remixin tahtiin? Tämä johtuu lohikäärmeen hiipuvista voimista. Täällä pitäisi olla bileet!”]]
 [[2. “Läpy läpy vaan, miksei kellään ole mitään UV-valossa hohtavaa päällään? Ei cyberpunk-proppeja? Herätkää nyt, hyvät ihmiset! Lohikäärmeen vointi saa tämän aikaan!” -&gt;1. “Häh? Eijei, ei kiitos, eikö teidän pitäisi tällä hetkellä hyppiä hikisinä jonkun remixin tahtiin? Tämä johtuu lohikäärmeen hiipuvista voimista. Täällä pitäisi olla bileet!”]]
 
-(set: $paikka to $paikka +1)</tw-passagedata><tw-passagedata pid="61" name="4. Ehkä joku voimien palasista on tipahtanut proppinäyttelyyn!" tags="prop" position="2787.3333333333335,697.3333333333334" size="100,100">Proppinäyttelyssä on aika hiljaista. Siellä täällä conikävelijä maleksii mutta kukaan ei näytä oikeasti katselevan proppeja. Kohta sinulle valkeneekin miksi. Normaalistihan pöydillä olisi mitä hienoimpia larppeihin tehtyjä loitsukirjoja, soihtuja, mystisten otusten päitä, avaruussotien aseita ja dystooppisia kaupankäyntivälineitä. Unohtamattakaan, kuinka olet tavallisesti nähnyt upeita vaatteita aina kuninkaista mystisten kulttien jäseniin, keijuista sotilaisiin. Nyt tilalla on kuitenkin roskaa.
+(if: $glowstick is 0) [(set: $paikka to $paikka +1)]</tw-passagedata><tw-passagedata pid="61" name="4. Ehkä joku voimien palasista on tipahtanut proppinäyttelyyn!" tags="prop" position="2785.3333333333335,697.3333333333334" size="100,100">Proppinäyttelyssä on aika hiljaista. Siellä täällä conikävijä maleksii mutta kukaan ei näytä oikeasti katselevan proppeja. Kohta sinulle valkeneekin miksi. Normaalistihan pöydillä olisi mitä hienoimpia larppeihin tehtyjä loitsukirjoja, soihtuja, mystisten otusten päitä, avaruussotien aseita ja dystooppisia kaupankäyntivälineitä. Unohtamattakaan, kuinka olet tavallisesti nähnyt upeita vaatteita aina kuninkaista mystisten kulttien jäseniin, keijuista sotilaisiin. Nyt tilalla on kuitenkin roskaa.
 
 Yhdellä pöydällä on vain Alepan kassillinen pakkausjätettä, rutattuja tölkkejä ja homeisia tomaatteja. Ihan oikeita siis, eivät edes hienoja 3D-printattuja proppeja. Toisaalla näet sermin kulmalle hylätyt rintaliivit, joista kaarituki törröttää ikävästi ja sen alla tuolilla on esillä Porin puuvillatehtaan historiaa ruutuvihkoon rustattuna. Irvistät, käännyt ja saat melkein sätkyn nähdessäsi edessäsi olevalla pöydällä ihmisen makaamassa.
 
@@ -562,7 +562,7 @@ Yhdellä pöydällä on vain Alepan kassillinen pakkausjätettä, rutattuja töl
 [[1. “HUI JÖÖSES- Öhöm, hei, Herkko. Tuota, mitä sinä teet makaamassa proppinäyttelyssä ja oletko nähnyt täällä jotain mystisten voimien tapaista? Ollaan aika pulassa.”]]
 [[2. Kerää ittes hei, ethän sinä ole proppi! Ylös siitä ja auta, alagalleriassa olevan lohikäärmeen voimat pitää löytää tai Ropecon ei ikinä palaa entiselleen!]]
 
-(set: $paikka to $paikka +1)</tw-passagedata><tw-passagedata pid="62" name="1. Suuntaat ulos missä coniväki hengailee vielä suht normaalin näköisesti." tags="sepät KESKEN" position="2601,399" size="100,100">Ei ulkonakaan kaikki ihan kohdallaan ole. Väki näemmä vielä muistaa harrastuksensa, mutta aika hatarasti. Kuulet, kuinka joku unohtaa kesken lauseen, miten sana larp lausutaan, eikä vieruskaveri osaakaan yrityksistään huolimatta neuvoa sen paremmin. Huhhuh, kiire.
+(if: $tikari is 0) [(set: $paikka to $paikka +1)]</tw-passagedata><tw-passagedata pid="62" name="1. Suuntaat ulos missä coniväki hengailee vielä suht normaalin näköisesti." tags="sepät KESKEN" position="2601,399" size="100,100">Ei ulkonakaan kaikki ihan kohdallaan ole. Väki näemmä vielä muistaa harrastuksensa, mutta aika hatarasti. Kuulet, kuinka joku unohtaa kesken lauseen, miten sana larp lausutaan, eikä vieruskaveri osaakaan yrityksistään huolimatta neuvoa sen paremmin. Huhhuh, kiire.
 Koetat saada pääsi tuulettumaan mutta korvissasi humisee vain lämpö. Liekö perinteinen heinäkuinen helle vai sittenkin jotain ihan muuta? Kuulet hieman kauempaa hätääntynyttä hälinää. Kas, seppien koju!
 
 Mutta hetkinen. Nouseeko ahjosta savua? Se nyt ei olisi mitenkään tavatonta, mutta sinulla on sellainen kutina, ettei nyt kyse olekaan ihan tavanomaisesta taonnasta. Lähestyessäsi kojua tajuat yhden sepän parran ja essun helman olevan tulessa. Seppäjoukko yrittää parhaansa mukaan sammuttaa ystävänsä kuontaloa mutta kaikki juoksevat ympäriinsä kuin päättömät kanat. Sepät kun toimivat yleensä yhdessä tilanteessa kuin tilanteessa kuin hyvin koordinoitu parvi. Nyt kuitenkin sammutusvesi on kaatunut, palopeitettä tai sammutinta ei saada auki ja kaaos on valmis.
@@ -656,7 +656,7 @@ Ei ole enää Ropeconia. Sinun tietoisuuteesi mahtuu vain Hese.
 
 Käännä aikaa taaksepäin ja yritä uudestaan, Ropeconissa tapahtuu edelleen kummia!
 [[1. Palaa alagalleriaan lohikäärmeen tapaamisen jälkeen. -&gt;voimieni rippeet.]]
-</tw-passagedata><tw-passagedata pid="68" name="1. Hei haloo nyt, missä on kunnon DDT:t? Tai Neckbreakerit! Eikö ketään kiinnosta Ropecon ja sen kohtalo!" tags="paini" position="2338.3333333333335,1215" size="100,100">Katsoja heittää sinua paheksuvasti pyyhkeellä, jota ei kai ikinä ole käytetty kunnon painihien pyyhkimiseen. Kulmaan on kirjailtu nimikirjaimet T.T. Lannistut ja pyyhkäiset omaa huolesta kosteaa ohimoasi.
+</tw-passagedata><tw-passagedata pid="68" name="1. Hei haloo nyt, missä on kunnon DDT:t? Tai Neckbreakerit! Eikö ketään kiinnosta Ropecon ja sen kohtalo!" tags="paini" position="2336.3333333333335,1215" size="100,100">Katsoja heittää sinua paheksuvasti pyyhkeellä, jota ei kai ikinä ole käytetty kunnon painihien pyyhkimiseen. Kulmaan on kirjailtu nimikirjaimet T.T. Lannistut ja pyyhkäiset omaa huolesta kosteaa ohimoasi.
 (set: $pyyhe to 1)
 
 Mistä etsit seuraavaksi?
@@ -665,13 +665,14 @@ Mistä etsit seuraavaksi?
 [[3. Ehkä joku voimien palasista on tipahtanut proppinäyttelyyn! -&gt;4. Ehkä joku voimien palasista on tipahtanut proppinäyttelyyn!]]
 (if: $paikka is &gt;2)[[4. Mitä jos voimien palanen on jäänyt iltaluennolle?]]
 (if: $paikka is &gt;2)[[5. Olen niin armottoman poikki, en ole löytänyt vielä mitään, pakko ottaa tirsat lattiamajoituksessa.]]
-</tw-passagedata><tw-passagedata pid="69" name="4. Mitä jos voimien palanen on jäänyt iltaluennolle?" tags="iltaluento" position="3195.3333333333335,999" size="100,100">Sinulta alkaa loppua ideat. Tuntuu, kuin olisit kolunnut koko Messukeskuksen läpi etkä ole vieläkään löytänyt vihin vihiä lohikäärmeen voimien olinpaikkaan. Ajatuksesi harhautuvat taas olennon väsyneseen ryhtiin, kuinka sen henki pihisi ja elämä tuntui valuvan sen kehosta Ropeconin koko olemus mukanaan. Sinut valtaa puistatus. Ei tämä voi päättyä näin. On pakko olla vielä joku paikka, josta etsiä.
+</tw-passagedata><tw-passagedata pid="69" name="4. Mitä jos voimien palanen on jäänyt iltaluennolle?" tags="iltaluento" position="3193.3333333333335,999" size="100,100">Sinulta alkaa loppua ideat. Tuntuu, kuin olisit kolunnut koko Messukeskuksen läpi etkä ole vieläkään löytänyt vihin vihiä lohikäärmeen voimien olinpaikkaan. Ajatuksesi harhautuvat taas olennon väsyneseen ryhtiin, kuinka sen henki pihisi ja elämä tuntui valuvan sen kehosta Ropeconin koko olemus mukanaan. Sinut valtaa puistatus. Ei tämä voi päättyä näin. On pakko olla vielä joku paikka, josta etsiä.
 
 Samalla tajuat tallustaneesi jälleen yhden luentosalin luo. Joka paikkaa kyllä kolottaa ja istahtaminen voisi tehdä sekä jaloille että ajatuksille hyvää, joten painat itsesi iltaluennon penkkiin. Jos muistat oikein, luvassa on vanhoja inspiroivia eläintarinoita tavallaan rauhalliseksi iltasatumeiningiksi. Valitettavasti et ole täälläkään turvassa sekasorrolta.
 
 ”Ja seuraavaksi maalin kuivumisen perusteet. Sukelletaan seinämaalin kiinnostaviin ominaisuuksiin.”
 Et jaksa enää edes yllättyä saati poistua kuuloetäisyyden tuolle puolen, kinttusi ovat todellakin kipeät ravaamisesta. Luento etenee juuri niin verkkaisesti kuin kuvittelitkin ja kolotuksen lisäksi havaitset tylsyyden yltyessä myös väsyä ja vilua. Onneksi joku on unohtanut viereiselle tuolille, varmaankin edelliseltä luennolta, lämpöiset ja pehmeät villasukat. Vedät ne jalkaan ja suunnittelet palauttavasi ne omistajalleen, kun tämä koko härdelli on ohi.
 (set: $villasukat to 1)
+(if: $eienää is 0) [(set: $paikka to $paikka +1)]
 
 Mitä haluat tehdä?
 [[1. En viitsi vielä nousta, ja kuka tietää, ehkä luento sivuaa figumaaleja jossain kohtaa? Jään.]]
@@ -680,12 +681,12 @@ Mitä haluat tehdä?
 
 Laskeudut hämärään kellarihalliin ja sen viileys tervehtii sinua poloista. Valitettavasti halli on jo täynnä nukkuvia ja tuhisevia conittajia ja vapaaehtoisia. Kuinka ihmeessä löydät itsesi mentävän kolon, missään ei tunnu olevan tilaa? Sali vaikuttaisi olevan kuin maanalainen labyrintti kuorsaavaa väkeä. Kauempana näet etäisesti majoitusvalvojan, ehkä hän osaa neuvoa jonkun vapaan nurkan. Saavut lähelle ja kiroat. Majoitusvalvoja nukkuu. 
 [[Mitä nyt? -&gt;0]]
-</tw-passagedata><tw-passagedata pid="71" name="1. Anteeksi, tuota, oletteko nähneet lohikäärmeen voimia? Äh, tavallaan jotain outoa?" tags="tanssi KESKEN" position="2518,1168" size="100,100">Lähin tanssija pysähtyy yritettyään vaihtaa tanssiparia itsensä kanssa ja katsoo sinua kummissaan.
+</tw-passagedata><tw-passagedata pid="71" name="1. Anteeksi, tuota, oletteko nähneet lohikäärmeen voimia? Äh, tavallaan jotain outoa?" tags="tanssi KESKEN" position="2580,1180" size="100,100">Lähin tanssija pysähtyy yritettyään vaihtaa tanssiparia itsensä kanssa ja katsoo sinua kummissaan.
 
 ”Lohikäärmeen? Jotkut kyllä yrittivät tuolla nurkassa lohikäärmemäistä letkajenkkaa mutta kukaan ei tunnu keksivän kumpi pää letkaa lähtee liikkeelle ensin. Outoa jos minulta kysytään mutten kyllä ole täällä nähnyt sen [[kummempaa]].”
-</tw-passagedata><tw-passagedata pid="72" name="2. Ensinnäkin, pornopolkkassa peukalo laitetaan vasten kämmenen syrjää, noin. Voitko auttaa?" tags="tanssi KESKEN" position="2674.6666666666665,1061" size="100,100">Lähin tanssija pysähtyy yritettyään vaihtaa tanssiparia itsensä kanssa ja katsoo sinua kummissaan.
+</tw-passagedata><tw-passagedata pid="72" name="2. Ensinnäkin, pornopolkkassa peukalo laitetaan vasten kämmenen syrjää, noin. Voitko auttaa?" tags="tanssi KESKEN" position="2683.6666666666665,1059" size="100,100">Lähin tanssija pysähtyy yritettyään vaihtaa tanssiparia itsensä kanssa ja katsoo sinua kummissaan.
 
-”Jaa juu niin kai sitten... En minä kyllä ole mitään voimanpaloja nähnyt. Saati voimaa täällä ylipäätään. Tuolla ihmisiltä loppui haba nostaa kynä, jotta voisivat kirjoittaa tanssitoiveita listaan. Minulla sen sijaan riittää puhtia ja [[taitoa -&gt;kummempaa]]!”</tw-passagedata><tw-passagedata pid="73" name="kummempaa" tags="tanssi" position="2774,1256.6666666666665" size="100,100">Tanssija kumartuu ja yrittää epätoivoisesti tehdä kuperkeikan saaden vain mekkonsa korviin ja mätkähtääkseen mahalleen lattialle. Varmistat vielä, etteikö jossain olisi vaikka hohtavaa palloa tai kivitaulua tai jotain, missä lukee ”lohikäärmeen voiman pala 1”.
+”Jaa juu niin kai sitten... En minä kyllä ole mitään voimanpaloja nähnyt. Saati voimaa täällä ylipäätään. Tuolla ihmisiltä loppui haba nostaa kynä, jotta voisivat kirjoittaa tanssitoiveita listaan. Minulla sen sijaan riittää puhtia ja [[taitoa -&gt;kummempaa]]!”</tw-passagedata><tw-passagedata pid="73" name="kummempaa" tags="tanssi" position="2775,1256.6666666666665" size="100,100">Tanssija kumartuu ja yrittää epätoivoisesti tehdä kuperkeikan saaden vain mekkonsa korviin ja mätkähtääkseen mahalleen lattialle. Varmistat vielä, etteikö jossain olisi vaikka hohtavaa palloa tai kivitaulua tai jotain, missä lukee ”lohikäärmeen voiman pala 1”.
 Tanssija vain pyörittää päätään ja kierii kyljellään muun tanssiaisväen sekaan kaataen neljä ihmistä, jotka twerkkaavat ringissä. Huomaat kierijän jättäneen jälkeensä hiema ryppyisen lehtisen, johon on kirjattu kaikki ne historialliset tanssit, joita salissa luulisi normaalisti tanssittavan. Huokaiset, nappaat laukusta kynän ja kirjoitat takapuolelle kaikki paikat, joissa olet jo käynyt ja jäänyt tyhjin käsin.
 (set: $lehtinen to 1)
 
@@ -695,7 +696,7 @@ Mistä etsit seuraavaksi?
 [[3. Ehkä joku voimien palasista on tipahtanut proppinäyttelyyn! -&gt;4. Ehkä joku voimien palasista on tipahtanut proppinäyttelyyn!]]
 (if: $paikka is &gt;2)[[4. Mitä jos voimien palanen on jäänyt iltaluennolle?]]
 (if: $paikka is &gt;2)[[5. Olen niin armottoman poikki, en ole löytänyt vielä mitään, pakko ottaa tirsat lattiamajoituksessa.]]
-</tw-passagedata><tw-passagedata pid="74" name="1. “Häh? Eijei, ei kiitos, eikö teidän pitäisi tällä hetkellä hyppiä hikisinä jonkun remixin tahtiin? Tämä johtuu lohikäärmeen hiipuvista voimista. Täällä pitäisi olla bileet!”" tags="disco" position="2874,1002" size="100,100">”Kyllä tässä hiki tulee, mutta me ei taideta osata yhtään lohikäärmeestä kertovaa taputusleikkiä! Kuura pisti UV-valot pois päältä, kun taputti niiden alla liian monta kertaa ohi. Tiiun tiiun pus pus pus, tiiun tiiun pus pus pus! One two, threele ile one two, threele ile one two, threele ile POIS!”
+</tw-passagedata><tw-passagedata pid="74" name="1. “Häh? Eijei, ei kiitos, eikö teidän pitäisi tällä hetkellä hyppiä hikisinä jonkun remixin tahtiin? Tämä johtuu lohikäärmeen hiipuvista voimista. Täällä pitäisi olla bileet!”" tags="disco" position="2872,1002" size="100,100">”Kyllä tässä hiki tulee, mutta me ei taideta osata yhtään lohikäärmeestä kertovaa taputusleikkiä! Kuura pisti UV-valot pois päältä, kun taputti niiden alla liian monta kertaa ohi. Tiiun tiiun pus pus pus, tiiun tiiun pus pus pus! One two, threele ile one two, threele ile one two, threele ile POIS!”
 
 Jostain päin rinkiä lentää armottoman taputuksen sinkoamana pinkki glow stick-rannekoru suoraan silmääsi. Onneksi itkettää jo valmiiksi vähän, niin isku ei sinänsä tunnu missään. Livautat rannekorun käteesi ja laahustat pois huoneesta läpytyksen saattelemana muistellen kunnon discolarppia haikeana.
 (set: $glowstick to 1)
@@ -709,9 +710,9 @@ Mistä etsit seuraavaksi?
 </tw-passagedata><tw-passagedata pid="75" name="1. “HUI JÖÖSES- Öhöm, hei, Herkko. Tuota, mitä sinä teet makaamassa proppinäyttelyssä ja oletko nähnyt täällä jotain mystisten voimien tapaista? Ollaan aika pulassa.”" tags="prop KESKEN" position="2929,575" size="100,100">Herkko nousee vaivalloisesti puoli-istuvaan asentoon ja näyttää vähän närkästyneeltä.
 
 ”Minä tässä vaan kelailin maailman menoa, you know, luontoa, yhteiskuntaa, hassuja kissavideoita.... Sen semmosta. En minä ole mitään voimia ehtinyt nähdä, kun oli niin [[kiire]] tässä vaakatasossa reflektoida.”
-</tw-passagedata><tw-passagedata pid="76" name="2. Kerää ittes hei, ethän sinä ole proppi! Ylös siitä ja auta, alagalleriassa olevan lohikäärmeen voimat pitää löytää tai Ropecon ei ikinä palaa entiselleen!" tags="prop KESKEN" position="2924,823" size="100,100">Herkko nousee vaivalloisesti puoli-istuvaan asentoon ja näyttää vähän närkästyneeltä.
+</tw-passagedata><tw-passagedata pid="76" name="2. Kerää ittes hei, ethän sinä ole proppi! Ylös siitä ja auta, alagalleriassa olevan lohikäärmeen voimat pitää löytää tai Ropecon ei ikinä palaa entiselleen!" tags="prop KESKEN" position="2925,823" size="100,100">Herkko nousee vaivalloisesti puoli-istuvaan asentoon ja näyttää vähän närkästyneeltä.
 
-”Pöh, no se nyt on selvää, etten ole proppi, kun en ole moisesta kuullutkaan! Minulla on tässä kuule ihan tarpeeksi [[kiire]] pötkötellä, jotta jaksaisin välittää kärmeleistä ja ropelluksista.”</tw-passagedata><tw-passagedata pid="77" name="kiire" tags="prop" position="3052,696" size="100,100">Herkko kaivaa selkänsä alta jotain ja viskaa sen jalkoihisi.
+”Pöh, no se nyt on selvää, etten ole proppi, kun en ole moisesta kuullutkaan! Minulla on tässä kuule ihan tarpeeksi [[kiire]] pötkötellä, jotta jaksaisin välittää kärmeleistä ja ropelluksista.”</tw-passagedata><tw-passagedata pid="77" name="kiire" tags="prop" position="3068,698" size="100,100">Herkko kaivaa selkänsä alta jotain ja viskaa sen jalkoihisi.
 ”Menetkös siitä menemään kunnon ihmisiä häiritsemästä! Ja vie tuo mukanasi, kun kerran menet roskiksen suuntaan. Se painoi filosofista selkääni.”
 Hän palaa takaisin makuuasentoon, ristii kädet rinnalleen ja alkaa viheltää. Huokaiset jo miljoonannen kerran tänään syvään ja nostat monojesi juuresta pikkuisen lateksitikarin poistuen samalla näyttelystä.
 (set: $tikari to 1)
@@ -722,7 +723,7 @@ Mistä etsit seuraavaksi?
 [[3. Discolarp on tuntunut aina tosi energiseltä, ehkä voimien rippeitä löytyisi sieltä?]]
 (if: $paikka is &gt;2)[[4. Mitä jos voimien palanen on jäänyt iltaluennolle?]]
 (if: $paikka is &gt;2)[[5. Olen niin armottoman poikki, en ole löytänyt vielä mitään, pakko ottaa tirsat lattiamajoituksessa.]]
-</tw-passagedata><tw-passagedata pid="78" name="1. En viitsi vielä nousta, ja kuka tietää, ehkä luento sivuaa figumaaleja jossain kohtaa? Jään." tags="iltaluento" position="3324,997" size="100,100">Olit sinänsä oikeassa. Luennoitsija mainitsee ohimenevästi, jos lapset vaikka kolauttavat seinämaalista palan pois ja talosta löytyy saman värisen figumaalin pohjat, kuinka voi lohkeaman korjata sillä avaamatta kokonaista isoa maalipurkkia. Siihen se Ropeconmainen lysti sitten loppuikin. Et ole koskaan nähnyt kenenkään paasaavan ulkomaaleista yhtä aikaa niin paatoksellisesti ja kuivasti. Tämä alkaa olemaan jo liki huvittavaa. Luento tuntuu pidemmältä kuin tavallisesti.
+</tw-passagedata><tw-passagedata pid="78" name="1. En viitsi vielä nousta, ja kuka tietää, ehkä luento sivuaa figumaaleja jossain kohtaa? Jään." tags="iltaluento" position="3354,1007" size="100,100">Olit sinänsä oikeassa. Luennoitsija mainitsee ohimenevästi, jos lapset vaikka kolauttavat seinämaalista palan pois ja talosta löytyy saman värisen figumaalin pohjat, kuinka voi lohkeaman korjata sillä avaamatta kokonaista isoa maalipurkkia. Siihen se Ropeconmainen lysti sitten loppuikin. Et ole koskaan nähnyt kenenkään paasaavan ulkomaaleista yhtä aikaa niin paatoksellisesti ja kuivasti. Tämä alkaa olemaan jo liki huvittavaa. Luento tuntuu pidemmältä kuin tavallisesti.
 
 Mitä haluat tehdä?
 [[1. Jään, mitä jos missaan maalin lohkeilun tuntomerkit? Hehheh.]]
@@ -730,7 +731,7 @@ Mitä haluat tehdä?
 </tw-passagedata><tw-passagedata pid="79" name="0" tags="majo" position="3011,1433.3333333333333" size="100,100">[[1. Herätän hänet, tämähän on hänen hommansa! -&gt;1]]
 [[2. Etsin itse vapaata paikkaa oikealta. -&gt;6]]
 [[3. Etsin itse vapaata paikkaa vasemmalta. -&gt;2]]
-</tw-passagedata><tw-passagedata pid="80" name="1" tags="majo" position="3147,1647.6666666666665" size="100,100">Ei herää sitten millään, taisit jopa läimäistä vähän ja valvojan kuola vain valuu. Mitä teet?
+</tw-passagedata><tw-passagedata pid="80" name="1" tags="majo" position="3150,1672.6666666666665" size="100,100">Ei herää sitten millään, taisit jopa läimäistä vähän ja valvojan kuola vain valuu. Mitä teet?
 
 [[1. Etsin vapaata paikkaa oikealta. -&gt;6]]
 [[2. Etsin vapaata paikkaa vasemmalta. -&gt;2]]</tw-passagedata><tw-passagedata pid="81" name="6" tags="majo" position="3213,1458" size="100,100">Päädyt ihmismutkaan, joka on niin hämärä, ettet oikein näe ympärillesi. Jossain vilkkuu puhelimen näyttö. Mitä teet?
@@ -759,7 +760,7 @@ Mitä haluat tehdä?
 [[1. Käännyn takaisin, on jo valmiiksi vilu, pakko olla parempikin paikka. -&gt;6]]</tw-passagedata><tw-passagedata pid="89" name="9" tags="majo" position="3399.3333333333335,1733" size="100,100">Saavut mutkaan. Ehkä täällä onnistaisi paremmin? Löydät kuin löydätkin hämärässä pienen pläntin, jolle käperryt. Huokaiset jo helpotuksesta, kunnes joku potkaisee sinua alaselkään. Vierustoveri puhuu ja sätkii unissaan. Ei tästä tulekaan mitään. Mitä teet?
 
 [[1. Teen uukkarin pätkän verran takaisinpäin. -&gt;8]]
-[[2. Nyt ärsyttää niin, että menen vasemmalle vaikka väkisin! -&gt;10]]</tw-passagedata><tw-passagedata pid="90" name="10" tags="majo" position="3518.6666666666665,1589" size="100,100">No nyt jos ei koskaan! Löydät nurkan, jossa pilkottaa puolikas makuualusta (omistaja nukkuu sillä aika vinottain ja enimmäkseen kylmällä lattialla]. Ei pläntti mukava ole mutta kelpaa. Tai siis kelpaisi ellet kohta huomaisi olkapääsi olevan märkä. Joku olikin kaatanut kolapullon juuri siihen, mihin painauduit, ja nyt olet kauttaaltaan tahmea ja nihkeä. Se siitä sitten. Mitä teet?
+[[2. Nyt ärsyttää niin, että menen vasemmalle vaikka väkisin! -&gt;10]]</tw-passagedata><tw-passagedata pid="90" name="10" tags="majo" position="3518.6666666666665,1589" size="100,100">No nyt jos ei koskaan! Löydät nurkan, jossa pilkottaa puolikas makuualusta (omistaja nukkuu sillä aika vinottain ja enimmäkseen kylmällä lattialla). Ei pläntti mukava ole mutta kelpaa. Tai siis kelpaisi ellet kohta huomaisi olkapääsi olevan märkä. Joku olikin kaatanut kolapullon juuri siihen, mihin painauduit ja nyt olet kauttaaltaan tahmea ja nihkeä. Se siitä sitten. Mitä teet?
 
 [[1. En nyt tiedä, onko se parempi, mutta palaan pätkän taaksepäin. -&gt;9]]
 [[2. Ihan sama, luovutan. Ei sillä ole enää väliä vaikka törmäisin seinään. Jatkan eteenpäin.]]
@@ -771,18 +772,18 @@ Olet jo kääntymässä kannoillasi ja jättämässä kaiken taakse, kun kompast
 
 Kuka kuiski? Herätitkö vielä kaiken lisäksi jonkun? Kaaduitko myöhäistä vuoroa tehneen vapaaehtoisen päälle? Ei, et makaa kenenkään päällä etkä kenenkään jaloissa. Joku on unohtanut makuualustansa siihen, mihin kaaduit, juuri sopivasti sinun kokoiseesi koloon. Hetkinen. Kuka puhui, mihin kompastuit?
 
-[[“K-KIVI?!?!]]
-</tw-passagedata><tw-passagedata pid="92" name="“K-KIVI?!?!" tags="majo KESKEN" position="3550,1297" size="100,100">”Minäpä minä! Mutta ole ystävällinen ja kuiskaa, muut nukkuvat!”
+[[“K-KIVI?!?!&quot;]]
+</tw-passagedata><tw-passagedata pid="92" name="“K-KIVI?!?!&quot;" tags="majo KESKEN" position="3550,1297" size="100,100">”Minäpä minä! Mutta ole ystävällinen ja kuiskaa, muut nukkuvat!”
 
 Olet täysin pökerryksissä. Et odottanut näkeväsi murikkaa täällä. Mitä tämä tarkoittaa?
 ”Noh, töissä minäkin Ropeconissa olen ja, kiitos sinun, loppuvuoroni info-tiskillä sujui oikein mainiosti muiden huolia hiljaa kuullen ja ihmisiä infoten! Tulin jo joku aika sitten tänne torkuille!”
 
-Olet iloinen nähdessäsi tutut (kiviset) kasvot ja huojentuneisuutesi sekoittuu totaaliseen väsymykseen. Itket hiljaa huolesi kivelle, kerrot kaiken, mitä olet matkallasi kokenut ja nähnyt, kuinka Ropeconin katoaminen tulee olemaan kokonaan sinun syysi ja kuinka sinua väsyttää enemmän kuin ikinä. Kivi tekee sitä, mitä osaa parhaiten; kuuntelee.
+Olet iloinen nähdessäsi tutut (kiviset) kasvot ja huojentuneisuutesi sekoittuu totaaliseen väsymykseen. Itket hiljaa huolesi kivelle, kerrot kaiken mitä olet matkallasi kokenut ja nähnyt, kuinka Ropeconin katoaminen tulee olemaan kokonaan sinun syysi ja kuinka sinua väsyttää enemmän kuin ikinä. Kivi tekee sitä mitä osaa parhaiten; kuuntelee.
 
 ”Voi ei, olen niin pahoillani. Mutta hei! Minun viereeni mahdut kyllä, olen loppujen lopuksi aika rauhallinen nukkuja. On minua kehuttu hyväksi tyynyksi ja unileluksikin! Saat paikkani!”
 
 Sallit epäillä Kiven sopivuutta päänaluseksi, mutta olet mahdottoman kiitollinen, että sinulle löytyi vihdoinkin paikka. Ihanaa, että joku ottaa sinut ahkerankin työpäivän jälkeen mielellään viereensä.
-Painaudut makuualustalle ja vaikka epäonnistuminen raastaa rintaasi, on väsymys voimakkaampi. Vedät Kiven viereesi ja juuri, kun olet laittanu silmät kiinni tunteaksesi maanalaisen lattian vakauden, kaikki tuntuu katoavan altasi ja nouset ilmaan.
+Painaudut makuualustalle ja vaikka epäonnistuminen raastaa rintaasi, on väsymys voimakkaampi. Vedät Kiven viereesi ja juuri, kun olet laittanut silmät kiinni tunteaksesi maanalaisen lattian vakauden, kaikki tuntuu katoavan altasi ja nouset ilmaan.
 
 [[Öööööööö, mitäh???]]</tw-passagedata><tw-passagedata pid="93" name="Öööööööö, mitäh???" tags="lop" position="3661,1038" size="100,100">Säpsähdät ja haukot henkeä. Sinun on vaikea saada tilanteesta selkoa. Viima humisee korvissasi ja olo on kevyt, ympärilläsi välkkyy ja vilahtelee. Puristat Kiveä kovempaa sylissäsi, sekin on aivan yhtä ihmeissään kuin sinä. Et ole enää majoituksessa vaan leijut jossain Messukeskuksen ja koko Ropeconin yläpuolella. Voi elämän kevät! Olette Kiven kanssa lohikäärmeen selässä!
 
@@ -810,7 +811,7 @@ Tutkit taskusi ja kaivat esille
 
 Ojennat Lohelle
 (if: $vesipullo is 1)[[1. Vesipullon -&gt;2. Vesipullon]] 
-(if: $koru is 1)[[2. Taotun korun -&gt;3. Taotun korun]]</tw-passagedata><tw-passagedata pid="96" name="2. Vesipullon" tags="lop" position="3946.3333333333335,1150" size="100,100">”Luottamukseni kykyihisi ei horjunut missään vaiheessa, sillä tiesin sinun olevan neuvokas ja muuntautumiskykyinen heti, kun tapasimme! Larp-tiskiltä sait vesipullon. Sinun oli mahdollista valita monenlaisista larpeista itsellesi sopivin ja juuri sinun päätökselläsi toit soljuvan veden ja monimuotoisuuden taas suoniini!”
+(if: $koru is 1)[[2. Taotun korun -&gt;3. Taotun korun]]</tw-passagedata><tw-passagedata pid="96" name="2. Vesipullon" tags="lop" position="3946.3333333333335,1150" size="100,100">”Luottamukseni kykyihisi ei horjunut missään vaiheessa, sillä tiesin sinun olevan neuvokas ja muuntautumiskykyinen heti kun tapasimme! Larp-tiskiltä sait vesipullon. Sinun oli mahdollista valita monenlaisista larpeista itsellesi sopivin ja juuri sinun päätökselläsi toit soljuvan veden ja monimuotoisuuden taas suoniini!”
 (set: $vesipullo to 0)
 
 Annat lohikäärmeelle
@@ -834,7 +835,7 @@ Katsahdat Kiveä, jota kiinnostaa, ja vaikka näet, miten maan elementti istuu u
 
 Et ole vieläkään uskoa korviasi.
 
-”Jos voimani, Ropeconin elementit, olisivat olleet erossa minusta yhtään kauemmin, olisi koko tapahtuma kuihtunut pois minun mukanani. Mutta kuten huomaat, edes minä en pysty pitämään conia pyörimässä yksin! Siihen tarvitaan myös sinun kaltaisiasi ihmisiä, kävijöitä ja järjestäjiä, vapaaehtoisia ja harrastajia, jotka toteuttavat näiden elementtien arvoja. Yhdessä me muodostamme Ropeconin hengen,” lohikäärme lausuu juhlallisesti.
+”Jos voimani, Ropeconin elementit, olisivat olleet erossa minusta yhtään kauemmin, olisi koko tapahtuma kuihtunut pois minun mukanani. Mutta kuten huomaat, edes minä en pysty pitämään conia pyörimässä yksin! Siihen tarvitaan myös sinun kaltaisiasi ihmisiä, kävijöitä ja järjestäjiä, vapaaehtoisia ja harrastajia, jotka toteuttavat näiden elementtien arvoja. Yhdessä me muodostamme Ropeconin hengen”, lohikäärme lausuu juhlallisesti.
 (set: $countdown to 6)
 
 (if: $paikka is 6)[[Jokin tuntuu kuitenkin painavan sinua.]]
@@ -1033,6 +1034,7 @@ Mutta seuraava kysymys kuuluukin, miten aloitat conisi?
 ”Ja kyllähän te jo tässä vaiheessa tiedätte, kuinka kauan öljymaalit kuivuvat,” luennoitsija lausuu makeasti ja asettaa kanvaksen öljymaalia pöydälle.
 
 Aika matelee yhtä hitaasti kuin maali. Tunnet, kuinka silmäsi lurpsuvat mutteivät suinkaan väsymyksestä. Silmäluomesi nimittäin valuvat luennoitsijan esimerkin lailla eikä sinulla ole enää aikomustakaan pysäyttää tapahtumia. Ihan sama. Millään ei ole enää väliä. Kehosi alkaa ensin valua ja tiputtaa, kunnes se pikkuhiljaa kuivuu, lohkeilee ja jämähtää kovaksi kokkareeksi tuolille. Rapistut säleiksi salin lattialle. Olet nyt yhtä kuivuvan maalin kanssa.
+(set: $eienää to 1)
 
 &#39;&#39;BAD ENDING&#39;&#39;
 
